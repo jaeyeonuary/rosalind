@@ -128,43 +128,43 @@
 #10 Genome Assembly as Shortest Superstring
 #
 # Solutions
-file10 = open('C:\\Users\\gjae9\\Downloads\\rosalind_long.txt', 'r')
-data10 = file10.read()
-gene10 = data10.split('>')
+# file10 = open('C:\\Users\\gjae9\\Downloads\\rosalind_long.txt', 'r')
+# data10 = file10.read()
+# gene10 = data10.split('>')
 
-fragments = []
-for gene in gene10[1:]:
-    line10 = gene.splitlines()
-    seq = ''.join(line10[1:])
-    fragments.append(seq)
+# fragments = []
+# for gene in gene10[1:]:
+#     line10 = gene.splitlines()
+#     seq = ''.join(line10[1:])
+#     fragments.append(seq)
 
-def overlap(s, t):
-    max_len = min(len(s), len(t))
-    for length in range(max_len, 0, -1):
-        if s[-length:] == t[:length]:
-            return length
-    return 0
+# def overlap(s, t):
+#     max_len = min(len(s), len(t))
+#     for length in range(max_len, 0, -1):
+#         if s[-length:] == t[:length]:
+#             return length
+#     return 0
 
-while len(fragments) > 1:
-    best_overlap = 0
-    best_i, best_j = None, None
+# while len(fragments) > 1:
+#     best_overlap = 0
+#     best_i, best_j = None, None
     
-    for i in range(len(fragments)):
-        for j in range(len(fragments)):
-            if i != j:
-                ov = overlap(fragments[i], fragments[j])
-                if ov > best_overlap:
-                    best_overlap = ov
-                    best_i, best_j = i, j
-    s = fragments[best_i]
-    t = fragments[best_j]
-    merged = s + t[best_overlap:]
-    if best_i > best_j:
-        fragments.pop(best_i)
-        fragments.pop(best_j)
-    else:
-        fragments.pop(best_j)
-        fragments.pop(best_i)
-    fragments.append(merged)    
+#     for i in range(len(fragments)):
+#         for j in range(len(fragments)):
+#             if i != j:
+#                 ov = overlap(fragments[i], fragments[j])
+#                 if ov > best_overlap:
+#                     best_overlap = ov
+#                     best_i, best_j = i, j
+#     s = fragments[best_i]
+#     t = fragments[best_j]
+#     merged = s + t[best_overlap:]
+#     if best_i > best_j:
+#         fragments.pop(best_i)
+#         fragments.pop(best_j)
+#     else:
+#         fragments.pop(best_j)
+#         fragments.pop(best_i)
+#     fragments.append(merged)    
 
-print(fragments[0])
+# print(fragments[0])
