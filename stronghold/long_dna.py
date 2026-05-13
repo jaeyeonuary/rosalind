@@ -1,5 +1,5 @@
 #9 Overlap Graphs
-file9 = open('C:\\Users\\gjae9\\Downloads\\rosalind_grph.txt', 'r')
+file9 = open('C:\\python\\rosalind\\dataset\\rosalind_grph.txt', 'r')
 data9 = file9.read()
 gene9 = data9.split('>')
 genes = {}
@@ -16,7 +16,7 @@ for s_name, s_seq in genes.items():
                 print(s_name, t_name)
 
 #10 Genome Assembly as Shortest Superstring
-file10 = open('C:\\Users\\gjae9\\Downloads\\rosalind_long.txt', 'r')
+file10 = open('C:\\python\\rosalind\\dataset\\rosalind_long.txt', 'r')
 data10 = file10.read()
 gene10 = data10.split('>')
 

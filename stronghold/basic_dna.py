@@ -1,23 +1,23 @@
 #1 Counting DNA nt
-s1 = open('C:\\Users\\gjae9\\Downloads\\rosalind_dna.txt', 'r')
+s1 = open('C:\\python\\rosalind\\dataset\\rosalind_dna.txt', 'r')
 seq1 = s1.read()
 print(seq1.count('A'), seq1.count('C'), seq1.count('G'), seq1.count('T'))
 
 #2 Transcribing DNA to RNA
-s2 = open('C:\\Users\\gjae9\\Downloads\\rosalind_rna.txt', 'r')
+s2 = open('C:\\python\\rosalind\\dataset\\rosalind_rna.txt', 'r')
 seq2 = s2.read()
 rna = seq2.replace('T', 'U')
 print(rna)
 
 #3 The Secondary and Tertiary Structures of DNA
-s3 = open('C:\\Users\\gjae9\\Downloads\\rosalind_revc (1).txt', 'r')
+s3 = open('C:\\python\\rosalind\\dataset\\rosalind_revc (1).txt', 'r')
 s3_seq = s3.read()
 trans = s3_seq.maketrans('ATCG', 'TAGC') #make change of letter to unicode
 seq3 = s3_seq.translate(trans) #translate s3_seq text
 print(seq3[::-1])
 
 #4 Finding a Motif in DNA
-file1 = open('C:\\Users\\gjae9\\Downloads\\rosalind_subs.txt', 'r')
+file1 = open('C:\\python\\rosalind\\dataset\\rosalind_subs.txt', 'r')
 data1 = file1.read()
 line = data1.splitlines()
 s4 = line[0]
@@ -31,7 +31,7 @@ while pos < len(s4):
     pos += 1 #start the next string
 
 #5 Locating Restriction Sites
-file2 = open('C:\\Users\\gjae9\\Downloads\\rosalind_revp (1).txt', 'r')
+file2 = open('C:\\python\\rosalind\\dataset\\rosalind_revp (1).txt', 'r')
 data2 = file2.read()
 line2 = data2.splitlines()
 s5 = ''.join(line2[1:])
@@ -72,7 +72,7 @@ n, m = int(n), int(m)
 print(fib_mortal(n, m))
 
 #8 Computing GC Content
-file8 = open('C:\\Users\\gjae9\\Downloads\\rosalind_gc (3).txt', 'r')
+file8 = open('C:\\python\\rosalind\\dataset\\rosalind_gc (3).txt', 'r')
 data8 = file8.read()
 gene8 = data8.split('>')
 max_gene = ''
