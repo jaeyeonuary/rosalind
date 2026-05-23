@@ -78,4 +78,16 @@ for seq3 in record3:
 
 print(short.format("fasta"))
 
-#4 FASTAQ format introduction
+#4 FASTQ format introduction
+'''
+Introduction
+- FASTQ format contains both nucleotide sequence and quality scores per base
+- FASTQ is commonly used in next-generation sequencing (NGS) outputs (e.g. Illumina)
+- Converting FASTQ to FASTA is necessary when tools only accept FASTA format (e.g. BLAST)
+- Biopython SeqIO.parse() can read FASTQ and convert to FASTA without external tools
+'''
+from Bio import SeqIO
+file4 = open('C:\\python\\rosalind\\dataset\\rosalind_tfsq.txt', 'r')
+data4 = SeqIO.parse(file4, "fastq")
+for data in data4:
+    print(data.format("fasta"))
